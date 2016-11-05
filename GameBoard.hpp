@@ -30,15 +30,81 @@ public:
    // Otherwise, returns the player's current position.
    // If the player's position is outside of the gameboard, throws index out of bounds exception
    // TO DO: implement this function properly
-   int checkChutesLadders(int position) {
-      if ((position < 0) || (position >= BOARD_SIZE)) {
+    int checkChutesLadders(int position) 
+    {
+      if ((position < 0) || (position >= BOARD_SIZE)) 
+      {
          throw range_error("index out of bounds");
       }
-      // TODO: implement this function properly
-      throw std::logic_error("not implemented yet");
-   }
+      
+      switch (position) 
+      {
+            case GameBoard::ONE: // Ladder
+                return(38);
+                break;
+            case GameBoard::FOUR: // Ladder
+                return(14);
+                break;
+            case GameBoard::NINE: // Ladder
+                return(31);
+                break;
+            case GameBoard::SIXTEEN: // Chute
+                return(6);
+                break;
+            case GameBoard::TWENTY_ONE: // Ladder
+                return(42);
+                break;
+            case GameBoard::TWENTY_EIGHT: // Ladder
+                return(84);
+                break;
+            case GameBoard::THIRTY_SIX: // Ladder
+                return(44);
+                break;
+            case GameBoard::FORTY_SEVEN: // Chute
+                return(26);
+                break;
+            case GameBoard::FORTY_NINE: // Chute
+                return(11);
+                break;
+            case GameBoard::FIFTY_ONE: // Ladder
+                return(67);
+                break;
+            case GameBoard::SIXTY_TWO: // Chute
+                return(19);
+                break;
+            case GameBoard::FIFTY_SIX: // Chute
+                return(53);
+                break;
+            case GameBoard::SIXTY_FOUR: // Chute
+                return(60);
+                break;
+            case GameBoard::SEVENTY_ONE: // Ladder
+                return(91);
+                break;
+            case GameBoard::EIGHTY: // Ladder
+                return(100);
+                break;
+            case GameBoard::EIGHTY_SEVEN: // Chute
+                return(24);
+                break;
+            case GameBoard::NINETY_THREE: // Chute
+                return(73);
+                break;
+            case GameBoard::NINETY_FIVE: // Chute
+                return(75);
+                break;
+            case GameBoard::NINETY_EIGHT: // Chute
+                return(78);
+                break;
+            default:
+                return(position);
+                break;
+           }
+        }
+    }
    
 private:
    // TO DO: add storage for squares including square of chutes and ladders
    // Requirement: use ExtendableVector to store the square
+   ExtendableVector *Spaces;
 };

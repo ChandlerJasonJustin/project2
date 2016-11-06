@@ -20,6 +20,7 @@ void checkGameBoard() {
    for (int ib = 0; ib < BOARD_SIZE; ib++) {
       switch (ib) {
          case GameBoard::ONE: // Ladder
+            cout << theGameBoard.checkChutesLadders(ib);
             assert(theGameBoard.checkChutesLadders(ib) == 38);
             break;
          case GameBoard::FOUR: // Ladder
@@ -159,7 +160,6 @@ void checkChutesAndLaddersGame() {
 }
 
 int main() {
-   
    cout << "*** Check GameBoard ***" << endl;
    {
       checkGameBoard();

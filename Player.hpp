@@ -21,8 +21,9 @@ public:
    // player's initial position is at the figurative square 0
    // TO DO: implement this constructor
    Player(string name) {
-      // TODO: implement this function properly
-      throw std::logic_error("not implemented yet");
+      playerName = name;
+      position = 0;
+      Die die();
    }
    
    // copy constructor
